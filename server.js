@@ -2,7 +2,7 @@ const express = require('express')
 const hbs = require('hbs')
 const fs = require('fs')
 const app = express();
-var port = process.env.PORT||3000;
+const port = process.env.PORT||3000;
 
 app.set('view engine','hbs')
 
@@ -17,12 +17,12 @@ app.use((req,res,next)=>{
 })
 
 
-
-
-app.use((req,res,next)=>{
-  res.render('maintainence.hbs')
-  // next();
-})
+//
+//
+// app.use((req,res,next)=>{
+//   res.render('maintainence.hbs')
+//   // next();
+// })
 
 
 
@@ -55,6 +55,6 @@ app.get('/about',(req,res)=>{
 
 
 
-app.listen((port)=>{
+app.listen(port,()=>{
   console.log(`Website is live on port ${port}`);
 })
